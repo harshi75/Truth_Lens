@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Verify a Claim — TruthLens</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<header class="nav"><div class="container navin">
+<a class="brand" href="index.html">Truth<span>Lens</span></a>
+<nav class="navlinks">
+<a href="index.html">Home</a><a href="verify.html">Verify</a><a href="how-it-works.html">How It Works</a><a href="features.html">Features</a><a href="demo.html">Demo</a><a href="about.html">About</a>
+</nav><div class="actions"><a class="btn ghost" href="login.html">Login</a><a class="btn primary" href="verify.html">Get Started</a><button class="menu">☰</button></div>
+</div></header><section class="pagehead"><div class="container"><h1>Verify a claim.</h1><p>Enter a factual claim and TruthLens will classify it, compare it with the available evidence dataset, store the verification, and generate an auditable result.</p></div></section>
+<section class="app"><div class="container"><div class="verifybox">
+<div class="tabs">
+  <button class="tab active" type="button" id="tab-single" onclick="switchVerifyTab('single')">Single Claim</button>
+  <button class="tab" type="button" id="tab-article" onclick="switchVerifyTab('article')">Article / Text</button>
+  <button class="tab" type="button" id="tab-url" onclick="switchVerifyTab('url')">URL</button>
+</div>
+
+<div id="panel-single">
+  <div class="field"><label>Claim</label><textarea id="claimInput" placeholder="Example: The city approved the transit budget after a public hearing."></textarea></div>
+  <button class="btn dark" onclick="verifyClaim()">Analyze Claim →</button>
+  <div id="verifyResult" style="margin-top:25px"><div class="empty">Your verification result will appear here.</div></div>
+</div>
+
+<div id="panel-article" style="display:none">
+  <div class="field"><label>Article or paragraph text</label><textarea id="articleInput" placeholder="Paste a paragraph or full article. TruthLens will split it into individually-checkable claims."></textarea></div>
+  <button class="btn dark" onclick="extractFromArticle()">Extract Claims →</button>
+  <div id="articleClaims" style="margin-top:25px"><div class="empty">Extracted claims will appear here — pick any to verify.</div></div>
+</div>
+
+<div id="panel-url" style="display:none">
+  <div class="field"><label>Article URL</label><input id="urlInput" type="url" placeholder="https://example.com/some-article" /></div>
+  <button class="btn dark" onclick="extractFromUrl()">Fetch &amp; Extract →</button>
+  <div id="urlClaims" style="margin-top:25px"><div class="empty">Extracted claims will appear here — pick any to verify.</div></div>
+</div>
+
+</div></div></section><footer class="footer"><div class="container"><div class="footergrid">
+<div><div class="brand">Truth<span>Lens</span></div><p>Verify claims. Understand evidence. Stay neutral.</p></div>
+<div><h4>Product</h4><a href="verify.html">Verify Claim</a><a href="demo.html">Demo</a><a href="features.html">Features</a><a href="dashboard.html">Dashboard</a></div>
+<div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="how-it-works.html">How It Works</a></div>
+<div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="login.html">Account</a></div>
+</div><small>© 2026 TruthLens · Results reflect available evidence and are not a guarantee of absolute truth.</small></div></footer><script src="assets/app.js"></script></body></html>
